@@ -1,0 +1,28 @@
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+
+}
+
+.container {
+  margin: 0 auto;
+  width: 960px;
+  text-align: center;
+}
+
+.fa-plus-circle {
+  float: right;
+}
+
+button {
+  border: none;
+  padding: 0;
+  color: #777;
+}
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+
+
