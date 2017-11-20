@@ -8,10 +8,10 @@
 <body>
   <div id="chat">
   </div>
-      <form id="new-message">
-        <input type="text" name="message"></input>
-        <input type="button" onClick="newMessage()" value="Post">
+      <form onsubmit="event.preventDefault(); submitMessage()">
+        <input id="new-message" type="text" name="message"></input>
+        <input type="submit" value="Post">
       </form>
-  <script src="app.js"></script>
+  <script src="iframe.js"></script>
 </body>
 </html>
