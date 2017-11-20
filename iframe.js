@@ -1,5 +1,6 @@
 window.onload = () => {
-  let input = document.getElementById('new-message')
+  const input = document.getElementById('new-message');
+  const messages = document.getElementById('chat');
   let parentWindow;
   let id;
 
@@ -20,7 +21,7 @@ window.onload = () => {
     newPost.className = 'new-post'
     const text = document.createTextNode(`[User ${data.id}] ${data.message}`);
     newPost.appendChild(text);
-    document.getElementById('chat').appendChild(newPost)
+    messages.appendChild(newPost);
     input.value = '';
   }
 
@@ -29,12 +30,11 @@ window.onload = () => {
     intro.className = 'intro';
     const text = document.createTextNode(`User ${data.id} has joined the chat.`);
     intro.appendChild(text);
-    document.getElementById('chat').appendChild(intro);
+    messages.appendChild(intro);
+    messages.scrollTop = messages.scrollHeight;
   }
 
   window.submitMessage = () => {
-    console.log('SUBMIT MESSAGE', input.value)
-    console.log('ID?', id)
     parentWindow.postMessage({
       type: 'new_message',
       id: id,

@@ -3,14 +3,17 @@
 
 <head>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 <body>
   <div class="chat-container">
     <div id="chat"></div>
-    <form onsubmit="event.preventDefault(); submitMessage()">
-      <input id="new-message" type="text" name="message"></input>
-      <input type="submit" value="Send Message">
-    </form>
+    <div class="form-container">
+      <form onsubmit="event.preventDefault(); submitMessage()" class="msg-input">
+        <input id="new-message" type="text" name="message"></input>
+        <input type="submit" value="Send">
+      </form>
+    </div>
   </div>
   <script src="iframe.js"></script>
 </body>

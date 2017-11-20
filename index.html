@@ -4,14 +4,25 @@
 <head>
   <title>Group Chat</title>
   <link rel="stylesheet" href="main.css">
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 </head>
 <body>
-  <h1 class="title">Group Chat</h1>
-  <button onClick="addIFrame()">JOIN CHAT
-    <!-- <i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i> -->
-  </button>
-  <div id="container"></div>
+  <div id="wrapper">
+    <div id="header">
+      <h1 class="title">Group Chat</h1>
+      <button onClick="addIFrame()">
+        <i class="fa fa-plus-circle fa-4x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <div id="content">
+      <div id="container"></div>
+    </div>
+    <div id="footer">
+        Coding challenge for Dynamic Yield
+        By <a href="http://github.com/fanny-jiang/chat-app"><i class="fa fa-github" aria-hidden="true"></i> Fanny Jiang</a>
+    </div>
+  </div>
   <script src="app.js"></script>
 </body>
 

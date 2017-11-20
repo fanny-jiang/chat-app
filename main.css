@@ -1,24 +1,28 @@
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body,h1,h2,h3,h4,h5,h6,a {font-family: "Inconsolata", sans-serif;}
 body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-    text-align: center;
-}
-
-#container {
-  margin: 0 auto;
+  min-height: 100%;
+  color: #777;
+  line-height: 1.8;
   text-align: center;
+  margin: 0 auto;
+  position: relative;
 }
 
-.fa-plus-circle {
-  float: right;
+#header {
+  padding: 3rem 5rem;
+  margin: 0 auto;
+}
+
+a {
+  border-bottom: 0x #777;
+  text-decoration: none;
 }
 
 button {
   border: none;
   padding: 0;
   color: #777;
+  float: right;
 }
 
 .intro {
@@ -32,7 +36,27 @@ iframe {
   min-height: 250px;
 }
 
+input {
+  min-width: 200px;
+}
+
 .chat-container {
   text-align: left;
+  padding: 0 1rem 0 1rem;
+  overflow: auto;
+}
+
+.msg-input {
+  margin-bottom: 1rem;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
   padding: 1rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
 }
