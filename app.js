@@ -7,7 +7,8 @@ window.onload = () => {
     const iframe = document.createElement('iframe');
     const iframeId = iframes.length + 1;
     iframe.src = 'iframe.html';
-    document.body.appendChild(iframe);
+    const container = document.getElementById('container')
+    container.appendChild(iframe);
 
     iframe.onload = () => {
       emitToIframe({

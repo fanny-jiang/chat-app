@@ -3,15 +3,15 @@
 
 <head>
   <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-  <div id="chat">
+  <div class="chat-container">
+    <div id="chat"></div>
+    <form onsubmit="event.preventDefault(); submitMessage()">
+      <input id="new-message" type="text" name="message"></input>
+      <input type="submit" value="Send Message">
+    </form>
   </div>
-      <form onsubmit="event.preventDefault(); submitMessage()">
-        <input id="new-message" type="text" name="message"></input>
-        <input type="submit" value="Post">
-      </form>
   <script src="iframe.js"></script>
 </body>
 </html>

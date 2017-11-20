@@ -1,12 +1,14 @@
 window.onload = () => {
   let input = document.getElementById('new-message')
-  let parentWindow, id;
+  let parentWindow;
+  let id;
 
   window.addEventListener('message', function(event) {
     if (!parentWindow) {
       parentWindow = event.source
+      id = event.data.id
     }
-    if (event.data.type === 'new_chat' || event.data.type ==='new_user') {
+    if (event.data.type === 'new_chat' || event.data.type === 'new_user') {
       newChat(event.data)
     } else if (event.data.type === 'new_message') {
       newMessage(event.data)
@@ -23,7 +25,6 @@ window.onload = () => {
   }
 
   function newChat(data) {
-    id = data.id
     const intro = document.createElement('P');
     intro.className = 'intro';
     const text = document.createTextNode(`User ${data.id} has joined the chat.`);
@@ -33,6 +34,7 @@ window.onload = () => {
 
   window.submitMessage = () => {
     console.log('SUBMIT MESSAGE', input.value)
+    console.log('ID?', id)
     parentWindow.postMessage({
       type: 'new_message',
       id: id,

@@ -3,12 +3,11 @@ body, html {
     height: 100%;
     color: #777;
     line-height: 1.8;
-
+    text-align: center;
 }
 
-.container {
+#container {
   margin: 0 auto;
-  width: 960px;
   text-align: center;
 }
 
@@ -26,5 +25,14 @@ button {
   font-weight: bold;
 }
 
+iframe {
+  border-color: #777;
+  border-radius: 10px;
+  margin: 2rem;
+  min-height: 250px;
+}
 
-
+.chat-container {
+  text-align: left;
+  padding: 1rem;
+}
