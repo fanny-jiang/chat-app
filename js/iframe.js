@@ -18,12 +18,12 @@ window.onload = () => {
     } else if (event.data.type === 'new_message') {
       newMessage(event.data)
     }
-  })
+  });
 
   // Appends a new message to the chat div element
   function newMessage(data) {
     const newPost = document.createElement('P');
-    newPost.className = 'new-post'
+    newPost.className = 'new-post';
     const text = document.createTextNode(`[User ${data.id}] ${data.message}`);
     newPost.appendChild(text);
     messages.appendChild(newPost);
@@ -41,11 +41,10 @@ window.onload = () => {
 
   // Emits payload to the parent container via postMessage
   window.submitMessage = () => {
-    parentWindow.postMessage({
+    parentWindow.postMessage( {
       type: 'new_message',
       id: id,
-      message: input.value
-    }, '*');
+      message: input.value }, '*');
   }
 }
 
