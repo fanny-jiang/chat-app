@@ -21,8 +21,10 @@ button {
   padding: 0;
   color: #777;
 }
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
+
+.intro {
+  font-weight: bold;
+}
 
 
 
