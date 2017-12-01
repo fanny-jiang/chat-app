@@ -2,10 +2,12 @@ var selector = 'div.w-row.x-ua-homepage-secondary-row.dyother.dyMonitor'
 
 var reorder = function (newOrder, selectors) {
   var container = document.querySelector(selectors);
+  var children;
+  var newIndex;
   if (container) {   // check to make sure element exists
     var children = container.children;
     newOrder.forEach(function(elem, i) {
-      var newIndex = newOrder[i] - 1;   // array indices are offset by 1
+      newIndex = newOrder[i] - 1;   // array indices are offset by 1
       container.appendChild(children[newIndex])
     })
   }
